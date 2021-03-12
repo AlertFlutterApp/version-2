@@ -3,6 +3,7 @@ import 'package:final_app/bloc/bloc_provider.dart';
 import 'package:final_app/pages/home/home.dart';
 import 'package:final_app/pages/home/home_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'ThemeDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -22,9 +23,13 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             accentColor: Colors.lightBlueAccent, primaryColor: Colors.lightBlue//const Color(0xFFDE4435)
         ),
-        home: BlocProvider(
+        darkTheme : ThemeData.dark(),
+        home:
+        BlocProvider(
           bloc: HomeBloc(),
           child: HomePage(),
-        ));
+        )
+    );
   }
 }
+//
